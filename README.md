@@ -17,3 +17,15 @@ CREATE TABLE movie (
     vote_average FLOAT,
     vote_count VARCHAR
 );
+```
+## Count of movies Each year
+```
+select 
+	extract( year from release_date) as year,
+	count(*)
+from movies
+	group by 
+		year
+	order by
+		year desc
+```
