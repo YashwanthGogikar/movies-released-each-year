@@ -1,23 +1,19 @@
-# movies-released-each-year
-This dataset contain information of movies released each year with there ratings.
 
-## create table
-'''sql
-create table movie(
-	page int,
-	aduit boolean,
-	path varchar,
-	genre_id int,
-	id int primary key,
-	Original_language varchar,
-	original_title varchar,
-	overview varchar,
-	popularity float,
-	poster_path varchar,
-	release_date date,
-	title varchar,
-	video boolean,
-	vote_average float,
-	vote_count varchar
-)
-'''
+```sql
+CREATE TABLE movie (
+    page INT,
+    aduit BOOLEAN,
+    path VARCHAR,
+    genre_id INT,
+    id INT PRIMARY KEY,
+    Original_language VARCHAR,
+    original_title VARCHAR,
+    overview VARCHAR,
+    popularity FLOAT,
+    poster_path VARCHAR,
+    release_date DATE,
+    title VARCHAR,
+    video BOOLEAN,
+    vote_average FLOAT,
+    vote_count VARCHAR
+);
