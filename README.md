@@ -2,7 +2,7 @@
 ```sql
 CREATE TABLE movie (
     page INT,
-    aduit BOOLEAN,
+    adult BOOLEAN,
     path VARCHAR,
     genre_id INT,
     id INT PRIMARY KEY,
