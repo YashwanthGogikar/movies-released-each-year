@@ -74,6 +74,7 @@ select title, original_language, release_date, avg_rate
 ```
 ## What is the Min rated and top rating film
 ```
+
 select title as Movie_name, 
    release_date,
    vote_average as Rating
