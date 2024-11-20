@@ -1,5 +1,5 @@
-## Create  table 
-```sql
+## Create  table movies 
+```
 CREATE TABLE movie (
     page INT,
     adult BOOLEAN,
@@ -18,6 +18,8 @@ CREATE TABLE movie (
     vote_count VARCHAR
 );
 ```
+uploaded data from kaggale.com 
+
 ## Count of movies Each year
 ```
 select 
@@ -32,7 +34,7 @@ from movies
 ## Top rated movie 
 ```
 with average_rating(Avg_rate) as (
-	select round(max(vote_average),2) from movies)
+		select round(max(vote_average),2) from movies)
 select title, original_language, release_date, avg_rate
 	from movies, average_rating
 	where vote_average<avg_rate
@@ -48,16 +50,18 @@ from movies
 group by 
      year
 order by
-year desc;
+    year desc;
 ```
 
 ## How many are avg from each language
 ```
 select
     extract (year from release_date) as year, original_language, count(*)
-	from movies
-    group by year, original_language
-	order by year desc
+	    from movies
+    group by 
+		year, original_language
+	order by 
+		year desc
 ```
 ## How many movies rating more than avg rating 
 ```
@@ -76,5 +80,5 @@ select title as Movie_name,
 	from movies
    where Vote_average=(select max(Vote_average) from movies)
 	or 
-	 vote_average = (select min(Vote_average) from movies)
+	  vote_average = (select min(Vote_average) from movies)
 ```
