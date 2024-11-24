@@ -31,7 +31,7 @@ from movies
 	order by
 		year desc
 ```
-## Top rated movie 
+## Top rated movie each year
 ```
 with average_rating(Avg_rate) as (
 		select round(max(vote_average),2) from movies)
